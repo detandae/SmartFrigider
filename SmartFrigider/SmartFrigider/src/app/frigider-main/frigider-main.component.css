@@ -1,0 +1,57 @@
+.fomenugomb {
+  height: 120px;
+}
+
+.background{
+  background: linear-gradient(
+    rgba(255,255,255,.6), 
+    rgba(255,255,255,.6)), url(/assets/huto_1.png) no-repeat;
+  background-size: 100% 100%;
+  height: 640px;
+}
+
+.btn_tartalom { 
+  cursor: pointer;  
+  text-align: center;
+  background-color: transparent; 
+  color: white;
+  border-radius: 9px;
+  height: 210px; 
+  width: 100%; 
+  color: #5a5959; 
+  font-size: 30px;
+  font-weight: 500; 
+} 
+
+.btn_felvetel { 
+  cursor: pointer;  
+  text-align: center;
+  background-color: transparent; 
+  color: white;
+  border-radius: 15px;
+  height: 405px; 
+  width: 100%; 
+  color: #5a5959; 
+  font-size: 30px;
+  font-weight: 500; 
+  z-index: -2;
+} 
+
+.btn_vissza{
+  background-color: #00008b;
+  z-index: 1;
+  border-radius: 15px;
+  height: 50px;
+  width: 70px;
+  position: absolute;
+  left:0;
+}
+.btn_home{
+  background-color: #00008b;
+  z-index: 1;
+  border-radius: 9px;
+  height: 50px;
+  width: 70px;
+  position: absolute;
+  right:0;
+}

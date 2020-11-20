@@ -10,6 +10,7 @@ import { FrigiderAddContentComponent } from './frigider-add-content/frigider-add
 import { RecipesComponent } from './recipes/recipes.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { SingleRecipeComponent } from './single-recipe/single-recipe.component';
+import { FrigiderMainComponent } from './frigider-main/frigider-main.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SingleRecipeComponent } from './single-recipe/single-recipe.component';
     FrigiderAddContentComponent,
     RecipesComponent,
     ShoppingListComponent,
-    SingleRecipeComponent
+    SingleRecipeComponent,
+    FrigiderMainComponent
   ],
   imports: [
     BrowserModule,

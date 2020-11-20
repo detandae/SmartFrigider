@@ -1,0 +1,43 @@
+.background{
+  background: linear-gradient(
+    rgba(102, 107, 175, 0.6), 
+    rgba(17, 25, 94, 0.6)), no-repeat;
+  background-size: 100% 100%;
+  height: 760px;
+}
+.tab {
+  display: inline-block;
+  margin-left: 40px;
+} 
+
+.btn_vissza{
+  background-color: #00008b;
+  z-index: 1;
+  border-radius: 15px;
+  color: white;
+  height: 50px;
+  width: 70px;
+  position: absolute;
+  left:0;
+}
+.btn_home{
+  background-color: #00008b;
+  z-index: 1;
+  color: white;
+  border-radius: 9px;
+  height: 50px;
+  width: 70px;
+  position: absolute;
+  right:0;
+}
+.btn_felvesz{
+  background-color: #00008b;
+  z-index: 1;
+  border-radius: 15px;
+  color: white;
+  height: 50px;
+  width: 200px;
+  margin-top: 50px;   /* = -height / 2   */
+  margin-left: 60px; /* = -width / 2    */
+  position: fixed;  
+}
