@@ -1,0 +1,46 @@
+.button_huto {
+  background: linear-gradient(
+    rgba(0,0,0,.6), 
+    rgba(0,0,0,.6)),  url(/assets/Fomenu_huto.jpg) no-repeat;
+  cursor: pointer;
+  border: none;
+  background-size: contain;
+}
+
+
+.fomenugomb {
+  height: 120px;
+  padding: 16px 32px;
+  margin: 4px 2px;
+  transition: 0.3s;
+}
+
+
+
+
+.text{
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.button_bevlist {
+  background: linear-gradient(
+    rgba(0,0,0,.6), 
+    rgba(0,0,0,.6)), url(/assets/Bev_lis.png) no-repeat;
+  cursor: pointer;
+  border: none;
+  background-size: contain;
+}
+
+.button_receptek {
+  background: linear-gradient(
+    rgba(0,0,0,.6), 
+    rgba(0,0,0,.6)), url(/assets/lasagna.jpg) no-repeat;
+  cursor: pointer;
+  border: none;
+  background-size: contain;
+}
+

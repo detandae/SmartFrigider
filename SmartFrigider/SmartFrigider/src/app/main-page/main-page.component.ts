@@ -7,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainPageComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    document.title="Főmenü"
+   }
 
   ngOnInit() {
   }

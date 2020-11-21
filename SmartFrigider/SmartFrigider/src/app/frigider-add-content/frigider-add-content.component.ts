@@ -7,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FrigiderAddContentComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+    document.title="Termék felvétel"
+  }
 
   ngOnInit() {
   }
