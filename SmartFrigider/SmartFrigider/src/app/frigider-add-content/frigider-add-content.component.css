@@ -37,7 +37,17 @@
   color: white;
   height: 50px;
   width: 200px;
-  margin-top: 50px;   /* = -height / 2   */
-  margin-left: 60px; /* = -width / 2    */
+  margin-top: 120px;   /* = -height / 2   */
+  margin-left: -240px; /* = -width / 2    */
   position: fixed;  
+}
+.btn_foto{
+  background-color: #00008b;
+  color: white;
+  border-radius: 9px;
+  height: 50px;
+  width: 50px;
+  margin-top: 40px;   /* = -height / 2   */
+  margin-left: -160px; /* = -width / 2    */
+  position: fixed; 
 }
