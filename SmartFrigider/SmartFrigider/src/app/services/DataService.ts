@@ -13,6 +13,7 @@ export class DataManagerService {
     constructor()
     {
         let recipe1=new Recipe();
+        recipe1.id=1;
         recipe1.Name="Example";
         recipe1.Price=1200;
         recipe1.Time=60;
@@ -22,6 +23,7 @@ export class DataManagerService {
         recipe1.Steps.push("Third Step;")
 
         let recipe2=new Recipe();
+        recipe1.id=2;
         recipe2.Name="Example2";
         recipe2.Price=600;
         recipe2.Time=60;
@@ -33,6 +35,17 @@ export class DataManagerService {
         this.RecipesList.push(recipe1);
         this.RecipesList.push(recipe2);
 
+    }
+
+    getRecipe(id):Recipe
+    {
+        for(let i=0;i<this.RecipesList.length;i++)
+        {
+            if(this.RecipesList[i].id==id)
+            {
+                return (this.RecipesList[i]);
+            }
+        }
     }
 
     GetFilteredRecipeList(search:string):Recipe[]

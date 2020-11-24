@@ -1,0 +1,8 @@
+.btn_blue{
+    background-color: #00008b;
+    z-index: 1;
+    border-radius: 15px;
+    color: white;
+    height: 50px;
+    width: 200px;
+  }

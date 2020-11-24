@@ -41,6 +41,8 @@ export class RecipesComponent implements OnInit {
   onRecipeClick(recipe)
   {
     console.log(recipe.Name);
+    this.router.navigate( ['/SingleRecipe', recipe.id]);
+   
     
   }
   OnSuggestClicked()
