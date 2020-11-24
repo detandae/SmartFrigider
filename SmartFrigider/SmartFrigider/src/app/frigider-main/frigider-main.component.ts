@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {Router, ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-frigider-main',
   templateUrl: './frigider-main.component.html',
@@ -7,11 +7,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FrigiderMainComponent implements OnInit {
 
-  constructor() { 
+  constructor(private route: ActivatedRoute,private  router: Router) {
     document.title="Hűtő"
-  }
+   }
 
   ngOnInit() {
+ 
   }
 
+  OnBackClicked()
+  {
+    this.router.navigate(['../MainPage']);
+  }
+  OnHomeClicked()
+  {
+    this.router.navigate(['../MainPage']);
+  }
+  OnFrigiderContentclicked()
+  {
+    this.router.navigate(['../FrigiderContent']);
+  }
+  AddContentClicked()
+  {
+    this.router.navigate(['../FrigiderAddContent']);
+  }
 }

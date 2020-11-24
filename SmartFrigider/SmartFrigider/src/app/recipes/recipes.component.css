@@ -12,6 +12,12 @@ h1 {text-align: center;}
     background-color: powderblue;
 }
 
+body {
+  background-color: linear-gradient(
+    rgba(102, 107, 175, 0.6), 
+    rgba(17, 25, 94, 0.6)), no-repeat;
+}
+
 .btn_vissza{
     background-color: #00008b;
     z-index: 1;
@@ -48,11 +54,6 @@ h1 {text-align: center;}
     z-index: 1;
     color: black;
     font-size: larger;
-    margin-top: 130px;
-    margin-left: 40px;
-    margin-right: 40px;
-    vertical-align: middle;
-    position: absolute;
   }
 
   .ajanlj{
@@ -60,12 +61,6 @@ h1 {text-align: center;}
     background-color: #7c7ce4;
     border-radius: 40px;
     color: whitesmoke;
-    margin-left: 30px;
-    margin-right: 30px;
-    position: relative;
-    vertical-align: middle;
-    margin-top: 30px;
-
   }
 
   .szurok{
@@ -78,36 +73,11 @@ h1 {text-align: center;}
     text-align: center;
   }
 
-  .receptek{
-    background-color: #393f8d;
+  .btn_blue{
+    background-color: #00008b;
     z-index: 1;
-    margin-top: 270px;
-    font-size: 30px;
-    color: black;
-    padding: 10px;
-    width: 320px;
-    position: static;
-    text-align: center;
-    /* border-bottom: black; */
-    border-style: solid;
-    /* background-clip: border-box;
-    border: black; */
-    /* text-decoration:  underline; */
-}
-
-.receptek2{
-    background-color: #393f8d;
-    z-index: 1;
-    margin-top: 20px;
-    font-size: 30px;
-    color: black;
-    padding: 10px;
-    width: 320px;
-    position: relative ;
-    text-align: center;
-    /* border-bottom: black; */
-    border-style: solid;
-    /* background-clip: border-box;
-    border: black; */
-    /* text-decoration:  underline; */
-}
+    border-radius: 15px;
+    color: white;
+    height: 50px;
+    width: 200px;
+  }

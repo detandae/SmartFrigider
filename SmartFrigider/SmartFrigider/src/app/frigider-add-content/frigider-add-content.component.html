@@ -1,44 +1,24 @@
+<!--
 <div style="display: flex; justify-content: center;" >
-  <button type="button" class="btn_vissza"><i class="fa fa-angle-left"></i> </button>
+  <button type="button"  (click)="OnBackClicked()" class="btn_vissza"><i class="fa fa-angle-left"></i> </button>
   <h4> Termék felvétel </h4>
   <br/>
   <br/>
   <br/>
-  <button type="button" class="btn_home"><i class="fa fa-home"></i> </button>
+  <button type="button" (click)="OnHomeClicked()" class="btn_home"><i class="fa fa-home"></i> </button>
 </div>
 
-<form>
-  <label for="hozzaalok">Válassz terméket:<span class="tab"></span></label>
-  <select name="hozzaalok" id="hozzaalok">
-    <optgroup label="Száraz élelmiszerek">
-      <option value="liszt">Liszt</option>
-      <option value="cukor">Cukor</option>
-      <option value="élesztő">Élesztő</option>
-      <option value="cukor">Cukor</option>
-    </optgroup>
-    <optgroup label="Tejtermékek">
-      <option value="tej">Tej</option>
-      <option value="joghurt">Joghurt</option>
-    </optgroup>
-    <optgroup label="Gyümölcsök">
-      <option value="alma">Alma</option>
-      <option value="körte">Körte</option>
-    </optgroup>
-    <optgroup label="Zöldségek">
-      <option value="uborka">Uborka</option>
-      <option value="paradicsom">Paradicsom</option>
-    </optgroup>
-    <optgroup label="Husok">
-      <option value="marha">Marha</option>
-      <option value="csirke">Csirke</option>
-    </optgroup>
-  </select>
+<form  #checkoutForm="ngForm">
+  <label for="productName">Válassz terméket:<span class="tab"></span> <span class="tab"></span> <span class="tab"></span></label>
+  <input type="text"  class="tab"  [(ngModel)]="productName" name="productName"  (change)="productNameChanged()"  placeholder=""  required>
+
   <br><br>
-  <label for="quantity" >Mennyiség: <span class="tab"></span> <span class="tab"></span> <span class="tab"></span></label>
-  <input type="number" id="quantity" name="quantity" min="0" max="10" step="0.5" value="1">
+  <label for="Amount" >Mennyiség: <span class="tab"></span> <span class="tab"></span> <span class="tab"></span></label>
+  <input type="number"  [(ngModel)]="Amount"  name="Amount"  id="Amount"  min="0" max="10" step="0.5" value="1">
   <br><br>
+
   <label for="hozzaalok">Válassz mértékegységet:<span class="tab"></span></label>
-  <select name="hozzaalok" id="hozzaalok">
+  <select (change)="getUnit($event.target.value)" name="hozzaalok" id="hozzaalok">
     <optgroup label="Tömeg">
       <option value="kg">kg</option>
       <option value="dkg">dkg</option>
@@ -57,4 +37,71 @@
 <br><br>
 <label>Termék felvétele nyugta fotó alapján:<span class="tab"></span></label>
 <button type="button" class="btn_foto"> <i class="fa fa-photo"></i> </button>
-<button type="button" class="btn_felvesz"> Felvétel </button>
+
+<button type="button" (click)="OnButtonAddclicked()" class="btn_felvesz" > Felvétel </button>
+<div>
+  <br><br>
+  <br><br>
+  <br><br>
+<label *ngIf="FormWarning">Töltsd ki az összes mezőt!<span class="tab"></span></label>
+</div>
+
+ Links -->
+ <div class="background">
+ <div style="display: flex; justify-content: center;" >
+  <button type="button"  (click)="OnBackClicked()" class="btn_vissza"><i class="fa fa-angle-left"></i> </button>
+  <h4> Termék felvétel </h4>
+  <br/>
+  <br/>
+  <br/>
+  <button type="button" (click)="OnHomeClicked()" class="btn_home"><i class="fa fa-home"></i> </button>
+</div>
+<div class="container">
+    <div class="form-group">
+    <label for="ProductName">Válassz terméket:</label>
+    <input type="ProductName"  [(ngModel)]="productName" class="form-control" id="Name" placeholder="termék neve">
+    </div>
+
+    <div class="form-group">
+    <label for="unit">Mennyiség:</label>
+    <input   type="number" type="unit"   [(ngModel)]="Amount" class="form-control" id="unit" placeholder="mennyiség">
+
+    </div> 
+    <div class="form-group">
+    <label for="Inputselect">Válassz mértékegységet:</label>
+    <select  (change)="getUnit($event.target.value)" class="form-control" >
+      <optgroup label="Tömeg">
+        <option value="kg">kg</option>
+        <option value="dkg">dkg</option>
+        <option value="g">g</option>
+      </optgroup>
+      <optgroup label="Űrmérték">
+        <option value="l">liter</option>
+        <option value="dl">dl</option>
+        <option value="cl">cl</option>
+      </optgroup>
+      <optgroup label="Darab">
+        <option value="db">db</option>
+      </optgroup>
+    </select>
+    </div> 
+    <div class="form-group">
+      <div class="container pt-3" >
+        <div class="row">
+          <div class="col text-center">
+            <button type="submit" (click)="OnButtonAddclicked()" class="btn_felvesz">Felvétel</button>
+            <label *ngIf="FormWarning">Töltsd ki az összes mezőt!</label>
+        </div>
+      </div>
+  
+  
+  
+</div>
+
+
+</div>
+
+
+
+
+

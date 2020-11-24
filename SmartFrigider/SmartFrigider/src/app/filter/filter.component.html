@@ -1,0 +1,37 @@
+<div class="background">
+  <div style="display: flex; justify-content: center;" >
+   <button type="button"  (click)="OnBackClicked()" class="btn_vissza"><i class="fa fa-angle-left"></i> </button>
+   <h4> Szűrők </h4>
+   <br/>
+   <br/>
+   <br/>
+   <button type="button" (click)="OnHomeClicked()" class="btn_home"><i class="fa fa-home"></i> </button>
+ </div>
+ <div class="container">
+     <div class="form-group">
+      <h5 for="ProductName">Alapanyag</h5>
+     <input type="ProductName"  [(ngModel)]="productName" class="form-control" id="Name" placeholder="termék neve">
+     </div>
+     
+     <div class="form-group">
+     <h5 for="ProductName">Ár(Ft)</h5>
+     <p  class="labelColor">Minimum : <input  [(ngModel)]="minPrice"  type="number" class="form-control"  OnlyNumber="true"  placeholder="min"  (ngModelChange)="minPriceChanged()"></p>
+     <p  class="labelColor">Maximum : <input   [(ngModel)]="maxPrice" type="number"  class="form-control"  OnlyNumber="true"  placeholder="max" (ngModelChange)="maxPriceChanged()"></p>
+    </div>
+
+     <br/>
+     <div class="form-group">
+      <h5 for="ProductName">Idő(perc)</h5>
+     <p  class="labelColor">Minimum: <input    [(ngModel)]="minTime" type="number" class="form-control" OnlyNumber="true" placeholder="min" (ngModelChange)="minTimeChanged()"></p>
+     <p  class="labelColor">Maximum : <input   [(ngModel)]="MaxTime" type="number" class="form-control"   OnlyNumber="true"placeholder="max"  (ngModelChange)="maxTimeChanged()"></p>
+    </div>
+     <div class="form-group">
+       <div class="container pt-3" >
+         <div class="row">
+           <div class="col text-center">
+             <button type="submit" (click)="OnAddClicked()" class="btn_felvesz">Beállít</button>
+         </div>
+       </div>
+ </div>
+ </div>
+ 
