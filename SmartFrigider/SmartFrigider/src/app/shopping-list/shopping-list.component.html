@@ -1,0 +1,72 @@
+<style>
+  
+    .background{
+      background: linear-gradient(
+        rgba(102, 107, 175, 0.6), 
+        rgba(17, 25, 94, 0.6)), no-repeat;
+      background-size: 100% 100%;
+      height: 760px;
+    }
+  
+  </style>
+  <div class="background">
+  <div style="display: flex; justify-content: center;" >
+    <button type="button"  (click)="OnBackClicked()" class="btn_vissza"><i class="fa fa-angle-left"></i> </button>
+    <h4> Bevásárló Lista </h4>
+    <br/>
+    <br/>
+    <br/>
+    <button type="button" (click)="OnHomeClicked()" class="btn_home"><i class="fa fa-home"></i> </button>
+  </div>
+    <br/>
+    <div class="container">
+      <div class="form-group">
+        <div style="display: flex; justify-content: left;" >
+         <label for="ProductName">Importált lista:</label><button type="button" (click)="OnRecipesClicked()" class="button_receptek" > Hűtő tartalma </button>
+        </div>
+      </div>
+    </div>  
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+        <label class="form-check-label" for="defaultCheck1">
+          Krumpli
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+        <label class="form-check-label" for="defaultCheck1">
+          Borsó
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+        <label class="form-check-label" for="defaultCheck1">
+          Darált hús
+        </label>
+        <hr>
+    </div> 
+    <div class="container">
+        <div class="form-group">
+          <div style="display: flex; justify-content: left;" >
+           <label for="ProductName">Egyéb felvett listaelemek:</label>
+          </div>
+        </div>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+        <label class="form-check-label" for="defaultCheck1">
+          Alma
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+        <label class="form-check-label" for="defaultCheck1">
+          Sótartó
+        </label>
+    </div>
+    <br/>
+    <br/>
+    <br/>  
+    <input class="form-control" type="text" placeholder="Plusz elem felvétele">
+  </div>
+  
