@@ -22,29 +22,17 @@
     <div class="container">
       <div class="form-group">
         <div style="display: flex; justify-content: left;" >
-         <label for="ProductName">Importált lista:</label><button type="button" (click)="OnRecipesClicked()" class="button_receptek" > Hűtő tartalma </button>
+         <label for="ProductName">Importált lista:</label><button type="button" (click)="OnFrigiderConentClicked()" class="button_receptek" > Hűtő tartalma </button>
         </div>
       </div>
     </div>  
-    <div class="form-check">
+    <div   *ngFor="let product of filteredProducts"  class="form-check">
         <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
         <label class="form-check-label" for="defaultCheck1">
-          Krumpli
+          {{product}}
         </label>
     </div>
-    <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-        <label class="form-check-label" for="defaultCheck1">
-          Borsó
-        </label>
-    </div>
-    <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-        <label class="form-check-label" for="defaultCheck1">
-          Darált hús
-        </label>
-        <hr>
-    </div> 
+
     <div class="container">
         <div class="form-group">
           <div style="display: flex; justify-content: left;" >
@@ -52,21 +40,22 @@
           </div>
         </div>
     </div>
-    <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-        <label class="form-check-label" for="defaultCheck1">
-          Alma
-        </label>
-    </div>
-    <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-        <label class="form-check-label" for="defaultCheck1">
-          Sótartó
-        </label>
-    </div>
+    <div   *ngFor="let product of plusProducts"  class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+      <label class="form-check-label" for="defaultCheck1">
+        {{product}}
+      </label>
+  </div>
+   
     <br/>
     <br/>
     <br/>  
-    <input class="form-control" type="text" placeholder="Plusz elem felvétele">
+    <input class="form-control"  [(ngModel)]="productName" type="text" placeholder="Plusz elem felvétele">
+    <div class="container pt-3" >
+      <div class="row">
+        <div class="col text-center">
+        <button (click)="AddproductClicked()" type="button" class="btn_blue" >Felvétel</button>
+      </div>
+    </div>
   </div>
   

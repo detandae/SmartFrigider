@@ -8,7 +8,7 @@ export class Recipe {
     ProductList:string[]=[];
     Steps:string[]=[]
     constructor() {
-    
+
      }
      
     

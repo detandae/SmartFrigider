@@ -31,4 +31,10 @@ export class SingleRecipeComponent implements OnInit {
     this.router.navigate(['../MainPage']);
   }
 
+  OnImportClicked()
+  {
+    this.DataService.importedRecipe=this.recipe;
+    this.router.navigate(['../ShoppingList']);
+  }
+
 }

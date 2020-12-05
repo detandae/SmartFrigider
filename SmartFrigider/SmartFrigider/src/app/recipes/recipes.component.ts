@@ -11,6 +11,7 @@ import {Recipe} from '../models/recipe.model'
 })
 export class RecipesComponent implements OnInit {
 
+  randomNumber:number
   public Recipes:Recipe[]=[]
   SearchClicked:boolean=false;
   NoResult:boolean=false;
@@ -38,6 +39,12 @@ export class RecipesComponent implements OnInit {
     if(this.Recipes.length<1){this.NoResult=true;}
     this.SearchClicked=true;
   }
+   getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
   onRecipeClick(recipe)
   {
     console.log(recipe.Name);
@@ -48,6 +55,12 @@ export class RecipesComponent implements OnInit {
   OnSuggestClicked()
   {
     console.log("On suggest clicked");
+    this.randomNumber=this.getRandomInt(1,4);
+    this.Recipes=[];
+    console.log(this.randomNumber);
+    this.router.navigate( ['/SingleRecipe', this.randomNumber]);
+    this.Recipes.push(this.DataService.RecipesList[this.randomNumber]);
+
   }
   ngOnInit() {
   }
